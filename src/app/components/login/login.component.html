@@ -1,0 +1,13 @@
+<p>התחברות-------</p>
+<form ngForm>
+    <div>
+        <label>שם משתמש</label>
+        <input type="text" [(ngModel)]="name" name="username">
+    </div>
+    <div>
+        <label>סיסמה</label>
+        <input type="password" [(ngModel)]="password" name="password">
+    </div>
+    <button type="submit" (click)="loginClick()">אישור</button>
+</form>
+<div>{{user?.userName}}</div>

@@ -1,0 +1,13 @@
+<div class="frame">
+    <div>{{job?.jobName}}</div>
+    <div>{{"תחום המישרה: " + job?.jobField | smallText}}</div>
+    <div>היקף המישרה: {{job?.hoursNumber}}</div>
+    <div>אזור: {{job?.area}}</div>
+    <div [class]="open? 'close' : 'open'">
+        <div>requirements: {{job?.requirements}}</div><br>
+        <div>workInHome: {{job?.workInHome}}</div><br>
+        <button (click)="bOpen()">הסתר פרטים</button><br>
+    </div>
+    <button (click)="bOpen()" [class]="open ? 'open' : 'close'">הצג פרטים</button>
+    <button (click)="cvClick()">שלח קורות חיים</button>
+</div>

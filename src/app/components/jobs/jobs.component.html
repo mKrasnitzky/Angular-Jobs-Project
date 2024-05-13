@@ -1,0 +1,16 @@
+<button (click)="search()">search ◯</button>
+<form [ngStyle]="{'display': find ? 'block' : 'none'}" [formGroup]="loginForm">
+    <label for="field">find field: </label>
+    <input type="text" formControlName="findField" name="field"><br>
+    <label for="area">find area: </label>
+    <input type="text" formControlName="findArea" name="area">
+</form>
+<!-- <ng-container *ngIf="(jobs | async) as jj"> -->
+<div *ngFor="let j of jobs | async">
+    <app-job (cvClicked)="addCV()" [job]="j">
+    </app-job>
+</div>
+
+<div>
+    hello!!!!!!!!!😀😊🥰☺😚🤩🤗
+</div>
